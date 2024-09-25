@@ -9,8 +9,8 @@ const Program_Banner = () => {
       <h1 className="heading">
         Our <span className="text-purple">Programs</span>
       </h1>
-      <p className="text-xl text-white">
-        Click each one to learn more!</span>
+      <p className="text-xl text-white text-center">
+        Click/Hover each one to learn more!
       </p>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -98,9 +98,8 @@ const Card = ({
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        background: "rgb(2,0,36)",
+        backgroundColor: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,111,121,1) 48%, rgba(29,0,255,1) 100%)",
       }}
     >
       {/* change to h-10 w-10 , add opacity-30  */}
