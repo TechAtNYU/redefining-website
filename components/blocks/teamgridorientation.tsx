@@ -67,7 +67,7 @@ export function TeamGridSection() {
               exit={{
                 opacity: 0,
                 transition: {
-                  duration: 0.1,
+                  duration: 0.5,
                 },
               }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
@@ -78,6 +78,12 @@ export function TeamGridSection() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
@@ -87,7 +93,7 @@ export function TeamGridSection() {
                   height={2000}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-200 lg:h-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top transform translate-y-1"
                 />
               </motion.div>
 
