@@ -4,17 +4,17 @@ import React from "react";
 
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
+import Image from "next/image";
 
 const Clients = () => {
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading py-10">
-        
         <span className="text-purple">Previous Companies</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
-       {/* <div
+        {/* <div
           // remove bg-white dark:bg-black dark:bg-grid-white/[0.05], h-[40rem] to 30rem , md:h-[30rem] are for the responsive design
           className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
         >
@@ -24,7 +24,7 @@ const Clients = () => {
             speed="slow"
           />
         </div> */}
-
+        {/* TODO: Please format imgs we use to be roughly consitent portportions or hard code in the ids to special width height */}
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
           {companies.map((company) => (
             <React.Fragment key={company.id}>
@@ -33,6 +33,7 @@ const Clients = () => {
                   src={company.img}
                   alt={company.name}
                   className="md:w-10 w-5"
+                  width={company.id === 4 || company.id === 5 ? 100 : 150}
                 />
                 <img
                   src={company.nameImg}
