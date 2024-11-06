@@ -7,7 +7,7 @@ import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 const SWPage = () => {
   return (
-    <div className="w-full md:w-[80%] justify-center px-10">
+    <div className="w-full md:w-[80%] justify-center px-10 dark:text-white-100 text-black-200">
       <p className="md:text-base text-sm md:font-normal font-light w-[60%] text-center justify-self-center">
         Are you interested in startups? Do you want to learn more about them and
         meet startup founders? Join the Tech@NYU Startup Week Committee! Help us

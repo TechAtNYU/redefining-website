@@ -50,18 +50,21 @@ const Feature = ({
   description,
   icon,
   index,
+  className,
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
   index: number;
+  className?: string;
 }) => {
   return (
     <div
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
+        index < 4 && "lg:border-b dark:border-neutral-800 ",
+        { className }
       )}
     >
       {index < 4 && (
@@ -85,3 +88,6 @@ const Feature = ({
     </div>
   );
 };
+
+export default FeaturesSectionDemo;
+export { Feature };

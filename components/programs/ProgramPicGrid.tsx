@@ -68,7 +68,7 @@ export const ProgramPicGridItem = ({
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
-
+  // TODO: Reformat these squares as per the design of the Bento Box
   return (
     <div
       className={cn(

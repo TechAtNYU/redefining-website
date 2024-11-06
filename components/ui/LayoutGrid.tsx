@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Button } from "./MovingBorders";
+import { movingBorderBox } from "./MovingBorders";
 
 type Card = {
   id: number;
@@ -30,7 +30,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     // change md:grid-cols-3 to md:grid-cols-4, gap-4 to gap-10
     <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto gap-10 ">
       {cards.map((card, i) => (
-        <Button
+        <movingBorderBox
           key={i}
           borderRadius="1.75rem"
           //   default is 2000
@@ -55,8 +55,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 selected?.id === card.id
                   ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                   : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
+                    ? "z-40 bg-white rounded-xl h-full w-full"
+                    : "bg-white rounded-xl h-full w-full"
               )}
               layout
             >
@@ -64,7 +64,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               <BlurImage card={card} />
             </motion.div>
           </div>
-        </Button>
+        </movingBorderBox>
       ))}
       <motion.div
         onClick={handleOutsideClick}

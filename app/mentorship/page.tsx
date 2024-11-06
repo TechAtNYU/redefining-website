@@ -11,6 +11,7 @@ import {
 import TeamTitle from "@/components/TeamTitle";
 import SWPage from "@/components/StartupWeek";
 import Footer from "@/components/Footer";
+import MentorPage from "@/components/Mentorship";
 
 const Home = () => {
   return (
@@ -19,8 +20,8 @@ const Home = () => {
        absolute top-0 left-0 flex justify-center items-center flex-col overflow-clip"
     >
       <FloatingNav navItems={navItems} />
-      <TeamTitle titleContent="Startup Committee" />
-      <SWPage />
+      <TeamTitle titleContent="Mentorship" />
+      <MentorPage />
       <Footer />
     </main>
   );
