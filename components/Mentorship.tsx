@@ -187,7 +187,7 @@ const MentorPage = () => {
       <h1 className="text-xl font-medium text-center pt-5 leading-snug tracking-wide">
         How it works
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 mx-auto justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 mx-auto justify-center lg:max-w-[60%]">
         {MGridItems.map((feature, tindex) => (
           <Feature key={feature.title} {...feature} index={tindex} />
         ))}
@@ -262,9 +262,7 @@ const MentorPage = () => {
         ))}
       </ProgramPicGrid>
       {/* Some component that showcases past sponsors */}
-      <h1 className="heading py-10">
-        <span className="text-purple">Syllabus</span>
-      </h1>
+
       <Timeline data={data} />
     </div>
   );

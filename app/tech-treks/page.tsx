@@ -4,12 +4,7 @@
 import { navItems } from "@/data";
 
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import {
-  TeamGridSection,
-  CloseIcon,
-} from "@/components/blocks/teamgridorientation";
 import TeamTitle from "@/components/TeamTitle";
-import SWPage from "@/components/StartupWeek";
 import TechTreksPage from "@/components/TechTreks";
 import Footer from "@/components/Footer";
 

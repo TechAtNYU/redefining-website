@@ -36,7 +36,7 @@ const TechTreksPage = () => {
       <h1 className="text-xl font-medium text-center pt-5 leading-snug tracking-wide">
         Two Tracks
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 mx-auto justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 mx-auto justify-center lg:max-w-[60%]">
         {TTGridIterm.map((feature, tindex) => (
           <Feature key={feature.title} {...feature} index={tindex} />
         ))}
